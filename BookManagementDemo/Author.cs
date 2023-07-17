@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,7 +35,7 @@ namespace BookManagementDemo
 
         public void printDetails()
         {
-           
+            Console.WriteLine("Id:{0,-20} Name:{1,-18} Gender:{2,-10}", this.Id, this.Name, this.Gender.ToString().ToUpper());
 
         }
     }
