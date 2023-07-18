@@ -69,10 +69,7 @@ namespace BookManagementDemo
 
 
         }
-        public void printList()
-        {
-            Console.WriteLine(" {0,-20}  {1,-25} {2,-10} {3,-10} {4,-30} ", this.Id, this.Title, this.Edition, this.Price, this.dateOfPublishing.ToString("d"), this.authorID);
-        }
+        
 
     }
 }
