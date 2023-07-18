@@ -8,55 +8,68 @@ namespace BookManagementDemo
 {
     public class Book
     {
-        public int Id { get; set; }
-
-        public string Title { get; set; }
-
-        public int Edition { get; set; }
-        public int Price { get; set; }
-
-        public string? dateOfPublishing { get; set; }
-
-        public string bookAuthor { get; set; }
-
-        public int authorID { get; set; }
-
-        public Book()
+        private int Id;
+        public int ID
         {
-            Id = 0;
-            Title = "Some Title";
-            // bookAuthor = new List<Author>();
+            get { return Id; }
+            set { Id = value; }
         }
-        public Book(int id, string title, int edition, int price, string dateOfPublishing, string bookAuthor, int authorID)
+
+        private string Title;
+        public string getTitle
+        {
+            get
+            { return Title; }
+            set
+            { Title = value; }
+        }
+        private int Edition;
+        public int getEdition
+        {
+            get { return Edition; }
+            set { Edition = value; }
+        }
+        private int Price;
+        public int getPrice
+        {
+            get { return Price; }
+            set { Price = value; }
+        }
+        private DateTime dateOfPublishing;
+        public DateTime getDateOfPublishing
+        {
+            get { return dateOfPublishing; }
+            set { dateOfPublishing = value; }
+        }
+
+        private int authorID;
+        public int getAuthorID
+        {
+            get { return authorID; }
+            set { authorID = value; }
+        }
+
+
+        public Book(int id, string title, int edition, int price, DateTime dateOfPublishing, int authorID)
         {
             Id = id;
             Title = title;
             Edition = edition;
             Price = price;
             this.dateOfPublishing = dateOfPublishing;
-            this.bookAuthor = bookAuthor;
             this.authorID = authorID;
         }
-        public Book(int id, string title, int edition, int price, string dateOfPublishing, string bookAuthor)
+        public Book(int id, string title, int edition, int price, DateTime dateOfPublishing)
         {
             Id = id;
             Title = title;
             Edition = edition;
             Price = price;
             this.dateOfPublishing = dateOfPublishing;
-            this.bookAuthor = bookAuthor;
+
 
         }
-        public void printList()
-        {
-           
-        }
+        
 
-
-        /*public Author getAuthor(int id)
-        {
-            return bookAuthor[id];
-
-        }*/
     }
-  }
+}
